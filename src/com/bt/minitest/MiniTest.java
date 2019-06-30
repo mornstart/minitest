@@ -32,16 +32,16 @@ public class MiniTest {
 
 		result.add("");
 		for (int i = 0; i < digits.length(); i++) {
-			int num = digits.charAt(i) - '0'; // 得到对应是什么数字
+			int num = digits.charAt(i) - '0'; // see every char
 			int rs = result.size();
 			for (int j = 0; j < rs; j++) {
-				// 得到result里第一个字符，分别与数字代表的每个字符相加
+				// concat every char
 				String current = result.get(0);
 				for (int k = 0; k < s[num].length(); k++) {
 					result.add(current + s[num].charAt(k));
 				}
 				if (result.size() > 1)
-					result.remove(0); // 去掉result里第一个字符
+					result.remove(0); // remove the first char 
 			}
 		}
 
